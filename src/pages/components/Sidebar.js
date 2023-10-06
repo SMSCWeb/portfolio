@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faFacebook, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { Slide, Fade } from "react-awesome-reveal";
+import Header from './Header';
 
 const Sidebar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -37,19 +38,22 @@ const Sidebar = () => {
                                     <div className="menu-nav-container">
                                         <ul className="internal-nav-links">
                                             <Slide cascade>
-                                                <li><a href="#1"><span>Projects</span></a>
+                                                <li><a href="#1"><span>About</span></a>
                                                     <img src="https://images.unsplash.com/photo-1615713170963-2595d2c721bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" />
                                                 </li>
-                                                <li><a href="#2"><span>Recognition</span></a>
+                                                <li><a href="#2"><span>Services</span></a>
                                                     <img src="https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2148&amp;q=80" />
                                                 </li>
-                                                <li><a href="#3"><span>Studio</span></a>
+                                                <li><a href="#3"><span>Projects</span></a>
                                                     <img src="https://images.unsplash.com/photo-1554941829-202a0b2403b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2100&amp;q=80" />
                                                 </li>
-                                                <li><a href="#4"><span>Contribution</span></a>
+                                                <li><a href="#4"><span>Clients</span></a>
                                                     <img src="https://images.unsplash.com/photo-1593697821028-7cc59cfd7399?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2100&amp;q=80" />
                                                 </li>
-                                                <li><a href="#5"><span>Career</span></a>
+                                                <li><a href="#5"><span>Careers</span></a>
+                                                    <img src="https://images.unsplash.com/photo-1588200618450-3a5b1d3b9aa5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2100&amp;q=80" />
+                                                </li>
+                                                <li><a href="#5"><span>Contact Us</span></a>
                                                     <img src="https://images.unsplash.com/photo-1588200618450-3a5b1d3b9aa5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2100&amp;q=80" />
                                                 </li>
                                             </Slide>
@@ -63,12 +67,17 @@ const Sidebar = () => {
                                                 </li>
                                                 <li>
                                                     <a href="www.instagram.com" className='icon'>
-                                                        <FontAwesomeIcon icon={faInstagram} />
+                                                        <FontAwesomeIcon icon={faTwitter} />
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="www.youtube.com" className='icon'>
                                                         <FontAwesomeIcon icon={faLinkedin} />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="www.youtube.com" className='icon'>
+                                                        <FontAwesomeIcon icon={faWhatsapp} />
                                                     </a>
                                                 </li>
                                             </Fade>
@@ -80,6 +89,7 @@ const Sidebar = () => {
                     )}
                 </div>
             </div>
+            <Header/>
         </>
     );
 }
