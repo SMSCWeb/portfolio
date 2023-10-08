@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faFacebook, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { Slide, Fade } from "react-awesome-reveal";
-import Header from './Header';
+
 
 const Sidebar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -89,7 +89,6 @@ const Sidebar = () => {
                     )}
                 </div>
             </div>
-            <Header/>
         </>
     );
 }
