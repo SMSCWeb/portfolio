@@ -32,7 +32,7 @@ const Sidebar = () => {
                         </div>
                     )}
                     {menuVisible && (
-                        <Slide duration={2000}>
+                        <Slide duration={1000}>
                             <div className="menu-holder">
                                 <div className={`menu-inside ${menuVisible ? 'open' : ''}`}>
                                     <div className="menu-nav-container">
@@ -59,7 +59,7 @@ const Sidebar = () => {
                                             </Slide>
                                         </ul>
                                         <ul className="external-nav-links">
-                                            <Fade cascade duration={2000} delay={4000}>
+                                            <Fade cascade duration={1000} delay={3000}>
                                                 <li>
                                                     <a href="www.facebook.com">
                                                         <FontAwesomeIcon icon={faFacebook} className='icon' />

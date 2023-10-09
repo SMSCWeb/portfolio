@@ -78,7 +78,6 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="spacing"></div>
         </div>
     );
 }
