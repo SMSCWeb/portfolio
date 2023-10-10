@@ -30,13 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      {showSidebar && <Sidebar />}
-      <Header />
-      <div className=''>
-        <About />
-      </div>
-      <ServicesSection/>
+    <h1>Hello World</h1>
     </>
   );
 }
