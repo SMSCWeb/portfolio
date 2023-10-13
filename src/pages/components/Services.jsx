@@ -1,8 +1,14 @@
 import React from 'react';
+import Image1 from "../assets/bg1.jpg";
+import Image2 from "../assets/bg2.jpg";
+import Image3 from "../assets/bg3.jpg";
+import Image4 from "../assets/bg4.jpg";
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign, faUsers, faComments, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+import BgImg from "../assets/bg-line.svg"
 
-// Sample service data
 const servicesData = [
     {
         icon: faDollarSign,
@@ -19,48 +25,72 @@ const servicesData = [
         title: 'Reliable support',
         description: 'Our team guarantees reliable support in addition to the offered services.',
     },
-    {
-        icon: faMapMarkerAlt,
-        title: 'Convenient location',
-        description: 'You can find our car rental offices throughout the US.',
-    },
 ];
 
-function Service(props) {
+const ServiceBox = ({ icon, title, description }) => {
     return (
-        <div className="col-sm-6 col-lg-3 ">
-            <article className="blurb blurb-minimal blurb-minimal_centered">
-                <div className="blurb-minimal__icon d-flex">
-                    <FontAwesomeIcon icon={props.icon} size="2x" />
-                </div>
-                <h3 className="heading-4 blurb__title">{props.title}</h3>
-                <p className="small text-secondary">{props.description}</p>
-            </article>
+        <div className="service-box">
+            <div className="service-icon">
+                <FontAwesomeIcon icon={icon} size="1x" />
+            </div>
+            <div className="service-details">
+                <h3 className='about-description'>{title}</h3>
+                <p>{description}</p>
+            </div>
         </div>
     );
 }
 
-function Services() {
+const Services = () => {
     return (
-        <section className="section section-xl bg-default services-container">
-            <div className="container d-flex flex-column gap-5">
-                <div className="row justify-content-center text-center">
-                    <div className="d-flex flex-column gap-5 col-md-10 col-xl-8">
-                        <h2>Why choose our service?</h2>
-                        <p>
-                            At GoDrive, our expert staff offer lots of benefits and advantages
-                            to our clients. With us, you’ll receive a class-leading car rental
-                            service from local experts.
+        <>
+            <div className='services-container'>
+                <div className="header__img service-img-container">
+                    <Image
+                        src={Image1}
+                        alt="1"
+                        className='image-half-left'
+                    />
+                    <Image
+                        src={Image2}
+                        alt="2"
+                        className='image-full'
+                    />
+                    <Image
+                        src={Image3}
+                        alt="3"
+                        className='image-full'
+                    />
+                    <Image
+                        src={Image4}
+                        alt="4"
+                        className='image-half-right'
+                    />
+                </div>
+                <div>
+
+                </div>
+                <div className="services-right-section">
+                    <div className="service-title sec-title">
+                        <div className=" title">Our Services</div>
+                        <hr />
+                        <p className='hero-description service-description'>Services are offered from the conceptual stage to commissioning for each project, enabling the Owner/Architect/Planner to arrive at an optimum design and installation for the following engineering services:
                         </p>
                     </div>
-                </div>
-                <div className="row row-30">
-                    {servicesData.map((service, index) => (
-                        <Service key={index} {...service} />
-                    ))}
+                    <div className="service-box-list">
+                        {servicesData.map((service, index) => (
+                            <ServiceBox key={index} {...service} />
+                        ))}
+                    </div>
+                    <Link href="/">
+                        <button className='service-theme-btn btn-style-three'>
+                            Read More
+                        </button>
+                    </Link>
                 </div>
             </div>
-        </section>
+        </>
+
     );
 }
 
