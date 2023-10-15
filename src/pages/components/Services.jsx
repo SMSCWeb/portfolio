@@ -5,9 +5,8 @@ import Image3 from "../assets/bg3.jpg";
 import Image4 from "../assets/bg4.jpg";
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollarSign, faUsers, faComments, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign, faUsers, faComments } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import BgImg from "../assets/bg-line.svg"
 
 const servicesData = [
     {
@@ -82,15 +81,17 @@ const Services = () => {
                             <ServiceBox key={index} {...service} />
                         ))}
                     </div>
-                    <Link href="/">
-                        <button className='service-theme-btn btn-style-three'>
-                            Read More
-                        </button>
-                    </Link>
+                    <div>
+                        <Link href="/">
+                            <button className='service-theme-btn btn-style-three'>
+                                Read More
+                            </button>
+                        </Link>
+                    </div>
+
                 </div>
             </div>
         </>
-
     );
 }
 

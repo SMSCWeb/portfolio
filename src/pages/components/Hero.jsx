@@ -18,7 +18,7 @@ const Hero = () => {
                     <p className='hero-title'>SM Service Consultancy</p>
                     <p className='hero-description'>It is a group of professionally qualified and experienced professionals, who have about 10-25 years of experience in their respective fields and have been successfully designed & executed several large projects.
                     </p>
-                    <Link href="/">
+                    <Link href="../servicePage">
                         <button className='theme-btn btn-style-three'>
                             Our Service
                         </button>
