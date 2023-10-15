@@ -30,7 +30,6 @@ const Navbar = () => {
         gsap.from('#nav img, #nav h3, #nav button', {
             y: -100,
             duration: 1,
-            delay: 1,
             opacity: 0,
             stagger: 0.2,
         });
@@ -53,7 +52,7 @@ const Navbar = () => {
 
     return (
         <div id="nav" ref={navRef} className={navClass}>
-            <Link href="../homePage">
+            <Link href="/">
                 <Image src={logoSrc} height={28} alt="logo" />
             </Link>
 
